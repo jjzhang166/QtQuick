@@ -1,5 +1,6 @@
-//press and hold, then drag in Flickable(ListView, GridView...But not Grid)
+//press and hold, then drag in Flickable(ListView, GridView)
 //will not emit "release" signal, but will emit "pressedButtonsChanged" signal
+//this will cause the button not able to be released, and showing wrong image
 //parameters in: imgNormal, imgPressed
 //signal out: btnClicked
 
@@ -13,7 +14,7 @@ Image {
     property int counter: 0
     MouseArea {
         anchors.fill: parent
-        onPressed: onPressed: parent.source = imgPressed
+        onPressed: parent.source = imgPressed
         onClicked: btnClicked()
         onPressedButtonsChanged: {
             if(counter === 1) {
