@@ -17,7 +17,7 @@ Item {
 
     Text {
         id: rootText
-        text: text
+        text: root.text
         visible: false
     }
     Text {
